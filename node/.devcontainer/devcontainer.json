@@ -1,0 +1,45 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+    "name": "Existing Dockerfile",
+    "build": {
+        // Sets the run context to one level up instead of the .devcontainer folder.
+        "context": "..",
+        // Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+        "dockerfile": "./Dockerfile"
+    },
+
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+
+    // Uncomment the next line to run commands after the container is created.
+    "postCreateCommand": "yarn",
+
+    // Configure tool-specific properties.
+    "customizations": {
+        "vscode": {
+            "extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"mhutchie.git-graph",
+				"eamodio.gitlens",
+				"firsttris.vscode-jest-runner",
+				"patbenatar.advanced-new-file",
+				"wmaurer.change-case",
+				"streetsidesoftware.code-spell-checker",
+				"EditorConfig.EditorConfig",
+				"IronGeek.vscode-env",
+				"sleistner.vscode-fileutils"
+			],
+            "settings": {
+                "prettier.prettierPath": "./node_modules/prettier"
+            }
+        }
+    }
+
+    // Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "devcontainer"
+}
